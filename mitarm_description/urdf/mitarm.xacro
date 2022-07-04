@@ -1,0 +1,314 @@
+<?xml version="1.0" ?>
+<robot name="mitarm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mitarm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mitarm_description)/urdf/mitarm.trans" />
+<xacro:include filename="$(find mitarm_description)/urdf/mitarm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0007225318145799458 0.0002347648176890952 0.007530286128890356" rpy="0 0 0"/>
+    <mass value="0.2613815524136642"/>
+    <inertia ixx="0.000388" iyy="0.000377" izz="0.000755" ixy="4e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_holder_1">
+  <inertial>
+    <origin xyz="-0.0003870250413150145 3.9263820049963354e-11 0.03337273576954071" rpy="0 0 0"/>
+    <mass value="0.32713628516416926"/>
+    <inertia ixx="0.000735" iyy="0.000717" izz="0.001307" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/servo_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.015" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/servo_holder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="orange_ring_1">
+  <inertial>
+    <origin xyz="-7.958230150670094e-14 6.100553000211611e-14 0.002250000000000002" rpy="0 0 0"/>
+    <mass value="0.022558641945082187"/>
+    <inertia ixx="5.3e-05" iyy="5.3e-05" izz="0.000107" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.065" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/orange_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.065" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/orange_ring_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_1">
+  <inertial>
+    <origin xyz="0.0001118512110484805 -7.858949452733166e-17 0.02595950050615324" rpy="0 0 0"/>
+    <mass value="0.368012692921962"/>
+    <inertia ixx="0.000846" iyy="0.000764" izz="0.001096" ixy="-0.0" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.0695" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.0695" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/shoulder_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bicep_1">
+  <inertial>
+    <origin xyz="0.09323815503254468 0.02940616409136899 1.820799583329702e-08" rpy="0 0 0"/>
+    <mass value="0.488316018042516"/>
+    <inertia ixx="0.00054" iyy="0.001965" izz="0.002185" ixy="-3.8e-05" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.0284 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/bicep_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.0284 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/bicep_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_1">
+  <inertial>
+    <origin xyz="0.0590141602834138 0.018434716397217638 -0.03646704698379216" rpy="0 0 0"/>
+    <mass value="0.41095625041627304"/>
+    <inertia ixx="0.000509" iyy="0.000896" izz="0.000795" ixy="-3e-06" iyz="2e-06" ixz="0.000288"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.185 0.0184 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.185 0.0184 -0.135" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/elbow_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="forearm_1">
+  <inertial>
+    <origin xyz="0.04066428584881604 -0.0001360148751787224 -0.026319862567505375" rpy="0 0 0"/>
+    <mass value="0.11130884365182603"/>
+    <inertia ixx="5.2e-05" iyy="0.000127" izz="9.3e-05" ixy="0.0" iyz="-0.0" ixz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.279871 0.0 -0.07453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.279871 0.0 -0.07453" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wrist_1">
+  <inertial>
+    <origin xyz="0.12336319217608632 0.016625106888881268 0.073794273438502" rpy="0 0 0"/>
+    <mass value="0.2607706314227234"/>
+    <inertia ixx="0.000249" iyy="0.000315" izz="0.000404" ixy="1.3e-05" iyz="1e-06" ixz="-1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.26417 0.01474 0.040469" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/wrist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.26417 0.01474 0.040469" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/wrist_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="palm_1">
+  <inertial>
+    <origin xyz="0.02968956559653607 -8.344158697326519e-15 0.004234119057067887" rpy="0 0 0"/>
+    <mass value="0.04910424116673452"/>
+    <inertia ixx="2e-05" iyy="5.4e-05" izz="4.5e-05" ixy="-0.0" iyz="0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.436965 0.0 -0.031444" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.436965 0.0 -0.031444" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_left_1">
+  <inertial>
+    <origin xyz="0.0160131530184755 0.01382660427211458 0.009744843983598872" rpy="0 0 0"/>
+    <mass value="0.03198293553605045"/>
+    <inertia ixx="6e-06" iyy="2.2e-05" izz="2.6e-05" ixy="-4e-06" iyz="-0.0" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.505715 0.0 -0.019194" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/finger_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.505715 0.0 -0.019194" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/finger_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="finger_right_1">
+  <inertial>
+    <origin xyz="0.009988577323884584 -0.017284532680518428 -0.009147832383093336" rpy="0 0 0"/>
+    <mass value="0.03292577094713501"/>
+    <inertia ixx="1e-05" iyy="4e-05" izz="4.9e-05" ixy="4e-06" iyz="-1e-06" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.505715 0.0 -0.043694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/finger_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.505715 0.0 -0.043694" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mitarm_description/meshes/finger_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="servo_holder_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.015" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="servo_holder_1"/>
+</joint>
+
+<joint name="bearing_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="servo_holder_1"/>
+  <child link="orange_ring_1"/>
+</joint>
+
+<joint name="base_revolute" type="revolute">
+  <origin xyz="0.0 0.0 0.0045" rpy="0 0 0"/>
+  <parent link="orange_ring_1"/>
+  <child link="shoulder_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="shoulder_joint" type="revolute">
+  <origin xyz="0.0 -0.0284 0.0655" rpy="0 0 0"/>
+  <parent link="shoulder_1"/>
+  <child link="bicep_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit upper="0.0" lower="-3.141593" effort="100" velocity="100"/>
+</joint>
+
+<joint name="elbow_joint" type="revolute">
+  <origin xyz="0.185 0.01 0.0" rpy="0 0 0"/>
+  <parent link="bicep_1"/>
+  <child link="elbow_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <limit upper="1.832596" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="elbow_twist" type="revolute">
+  <origin xyz="0.094871 0.0184 -0.06047" rpy="0 0 0"/>
+  <parent link="elbow_1"/>
+  <child link="forearm_1"/>
+  <axis xyz="0.838671 0.0 -0.544639"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist_joint" type="revolute">
+  <origin xyz="-0.015701 -0.01474 -0.114999" rpy="0 0 0"/>
+  <parent link="forearm_1"/>
+  <child link="wrist_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="wrist_twist" type="revolute">
+  <origin xyz="0.172795 0.01474 0.071913" rpy="0 0 0"/>
+  <parent link="wrist_1"/>
+  <child link="palm_1"/>
+  <axis xyz="1.0 0.0 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="finger_left_joint" type="revolute">
+  <origin xyz="0.06875 0.0 -0.01225" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="finger_left_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="0.0" lower="-1.308997" effort="100" velocity="100"/>
+</joint>
+
+<joint name="finger_right_joint" type="revolute">
+  <origin xyz="0.06875 0.0 0.01225" rpy="0 0 0"/>
+  <parent link="palm_1"/>
+  <child link="finger_right_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="1.308997" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>
