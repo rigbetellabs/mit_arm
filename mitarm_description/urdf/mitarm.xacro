@@ -111,9 +111,9 @@
 
 <link name="elbow_1">
   <inertial>
-    <origin xyz="0.0590141602834138 0.018434716397217638 -0.03646704698379216" rpy="0 0 0"/>
+    <origin xyz="0.06935481660081327 0.01843471639721764 0.001557576303791386" rpy="0 0 0"/>
     <mass value="0.41095625041627304"/>
-    <inertia ixx="0.000509" iyy="0.000896" izz="0.000795" ixy="-3e-06" iyz="2e-06" ixz="0.000288"/>
+    <inertia ixx="0.000331" iyy="0.000896" izz="0.000973" ixy="-3e-06" iyz="0.0" ixz="-1.3e-05"/>
   </inertial>
   <visual>
     <origin xyz="-0.185 0.0184 -0.135" rpy="0 0 0"/>
@@ -132,19 +132,19 @@
 
 <link name="forearm_1">
   <inertial>
-    <origin xyz="0.04066428584881604 -0.0001360148751787224 -0.026319862567505375" rpy="0 0 0"/>
+    <origin xyz="0.04843860215732515 -0.0001360148751786914 7.370396379019484e-05" rpy="0 0 0"/>
     <mass value="0.11130884365182603"/>
-    <inertia ixx="5.2e-05" iyy="0.000127" izz="9.3e-05" ixy="0.0" iyz="-0.0" ixz="4.8e-05"/>
+    <inertia ixx="2e-05" iyy="0.000127" izz="0.000125" ixy="0.0" iyz="-0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.279871 0.0 -0.07453" rpy="0 0 0"/>
+    <origin xyz="-0.2975 0.0 -0.135956" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.279871 0.0 -0.07453" rpy="0 0 0"/>
+    <origin xyz="-0.2975 0.0 -0.135956" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/forearm_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -153,19 +153,19 @@
 
 <link name="wrist_1">
   <inertial>
-    <origin xyz="0.12336319217608632 0.016625106888881268 0.073794273438502" rpy="0 0 0"/>
+    <origin xyz="0.040568256623747245 0.016625106888881306 0.0023665708399699947" rpy="0 0 0"/>
     <mass value="0.2607706314227234"/>
     <inertia ixx="0.000249" iyy="0.000315" izz="0.000404" ixy="1.3e-05" iyz="1e-06" ixz="-1.6e-05"/>
   </inertial>
   <visual>
-    <origin xyz="-0.26417 0.01474 0.040469" rpy="0 0 0"/>
+    <origin xyz="-0.3775 0.01474 -0.135956" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/wrist_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.26417 0.01474 0.040469" rpy="0 0 0"/>
+    <origin xyz="-0.3775 0.01474 -0.135956" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/wrist_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -174,19 +174,19 @@
 
 <link name="palm_1">
   <inertial>
-    <origin xyz="0.02968956559653607 -8.344158697326519e-15 0.004234119057067887" rpy="0 0 0"/>
+    <origin xyz="0.029689630044196946 -8.294476216974544e-15 0.004234416458535867" rpy="0 0 0"/>
     <mass value="0.04910424116673452"/>
     <inertia ixx="2e-05" iyy="5.4e-05" izz="4.5e-05" ixy="-0.0" iyz="0.0" ixz="-2e-06"/>
   </inertial>
   <visual>
-    <origin xyz="-0.436965 0.0 -0.031444" rpy="0 0 0"/>
+    <origin xyz="-0.4675 0.0 -0.136441" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.436965 0.0 -0.031444" rpy="0 0 0"/>
+    <origin xyz="-0.4675 0.0 -0.136441" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/palm_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -195,19 +195,19 @@
 
 <link name="finger_left_1">
   <inertial>
-    <origin xyz="0.0160131530184755 0.01382660427211458 0.009744843983598872" rpy="0 0 0"/>
+    <origin xyz="0.016013217466136598 0.013826604272114636 0.009745141385066741" rpy="0 0 0"/>
     <mass value="0.03198293553605045"/>
     <inertia ixx="6e-06" iyy="2.2e-05" izz="2.6e-05" ixy="-4e-06" iyz="-0.0" ixz="-2e-06"/>
   </inertial>
   <visual>
-    <origin xyz="-0.505715 0.0 -0.019194" rpy="0 0 0"/>
+    <origin xyz="-0.53625 0.0 -0.124191" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/finger_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.505715 0.0 -0.019194" rpy="0 0 0"/>
+    <origin xyz="-0.53625 0.0 -0.124191" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/finger_left_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -216,19 +216,19 @@
 
 <link name="finger_right_1">
   <inertial>
-    <origin xyz="0.009988577323884584 -0.017284532680518428 -0.009147832383093336" rpy="0 0 0"/>
+    <origin xyz="0.009988641771545681 -0.017284532680518373 -0.009147534981625433" rpy="0 0 0"/>
     <mass value="0.03292577094713501"/>
     <inertia ixx="1e-05" iyy="4e-05" izz="4.9e-05" ixy="4e-06" iyz="-1e-06" ixz="3e-06"/>
   </inertial>
   <visual>
-    <origin xyz="-0.505715 0.0 -0.043694" rpy="0 0 0"/>
+    <origin xyz="-0.53625 0.0 -0.148691" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/finger_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="-0.505715 0.0 -0.043694" rpy="0 0 0"/>
+    <origin xyz="-0.53625 0.0 -0.148691" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://mitarm_description/meshes/finger_right_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -272,23 +272,23 @@
 </joint>
 
 <joint name="elbow_twist" type="revolute">
-  <origin xyz="0.094871 0.0184 -0.06047" rpy="0 0 0"/>
+  <origin xyz="0.1125 0.0184 0.000956" rpy="0 0 0"/>
   <parent link="elbow_1"/>
   <child link="forearm_1"/>
-  <axis xyz="0.838671 0.0 -0.544639"/>
+  <axis xyz="1.0 0.0 -0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <joint name="wrist_joint" type="revolute">
-  <origin xyz="-0.015701 -0.01474 -0.114999" rpy="0 0 0"/>
+  <origin xyz="0.08 -0.01474 0.0" rpy="0 0 0"/>
   <parent link="forearm_1"/>
   <child link="wrist_1"/>
-  <axis xyz="0.0 -1.0 -0.0"/>
+  <axis xyz="0.0 -1.0 0.0"/>
   <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <joint name="wrist_twist" type="revolute">
-  <origin xyz="0.172795 0.01474 0.071913" rpy="0 0 0"/>
+  <origin xyz="0.09 0.01474 0.000485" rpy="0 0 0"/>
   <parent link="wrist_1"/>
   <child link="palm_1"/>
   <axis xyz="1.0 0.0 -0.0"/>
